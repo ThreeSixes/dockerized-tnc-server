@@ -1,0 +1,8 @@
+version: "3"
+services:
+    tnc-server:
+        build: .
+        image: tnc-server:latest
+        restart: always
+        devices:
+            - /dev/ttyUSB0:/dev/serial_tnc
