@@ -1,4 +1,4 @@
 #!/bin/sh
 
-chmod +x /app/tnc-server
+echo "Starting TNC server..."
 /app/tnc-server -port=$SERIAL_PORT -baud=$BAUDRATE -listen=$LISTEN_SPEC

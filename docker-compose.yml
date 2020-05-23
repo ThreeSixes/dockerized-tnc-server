@@ -3,6 +3,7 @@ services:
     tnc-server:
         build: .
         image: tnc-server:latest
-        restart: always
+        restart: unless-stopped
+        expose: 6700
         devices:
-            - /dev/ttyUSB0:/dev/serial_tnc
+            - /dev/ttyUSB0:/dev/ttyTNC0
